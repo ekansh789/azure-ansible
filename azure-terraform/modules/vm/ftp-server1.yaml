@@ -1,0 +1,7 @@
+- name: install FTP server
+  hosts: all
+  become: yes
+  become_method: sudo
+  become_user: root
+  roles:
+    - ftp_server

@@ -1,0 +1,3 @@
+---
+# vars file for ftp_server
+vm_public_ip : "azurerm_public_ip.public-work.ip_address"

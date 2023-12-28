@@ -1,0 +1,19 @@
+---
+# tasks file for ftp_server
+ - name: Update package cache and upgarde
+   apt:
+     update_cache: yes
+     upgrade: yes
+     cache_valid_time: 86400
+
+ - name: Install ftp server
+   apt:
+     name: vsftpd
+     state: present
+
+
+ - name: Start and enable vsftpd service
+   systemd:
+     name: vsftpd
+     enabled: yes
+     state: started
