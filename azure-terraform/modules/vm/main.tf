@@ -38,7 +38,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
   network_interface_ids           = [azurerm_network_interface.azure-network.id]
 
   admin_ssh_key {
-    public_key = file("~/.ssh/id_rsa.pub")
+    public_key = file("./id_rsa.pub")
     username   = var.vm_username
   }
 
